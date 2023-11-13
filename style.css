@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(img/background.webp);
+}
+
+.container {
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem auto 20rem;
+}
+
+.page {
+    border: 0.3rem solid #999;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.gallery {
+    width: 50rem;
+    height: 50rem;
+    display: inline-block;
+}
+
+.swatch {
+    position: absolute;
+    top: 2rem;
+    left: 1.7rem;
+    display: flex;
+    gap: 1.3rem;
+    z-index: 2;
+}
+
+.swatch>div {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swatch div:hover,
+.swatch div:active,
+.swatch div:focus {
+    border: 0.2rem solid #00000080;
+    transform: scale(0.97);
+    transition: all 0.3s ease;
+}
+
+.green {
+    background-color: #333a27;
+}
+
+.midnight {
+    background-color: #1a2b29;
+}
+
+.silver {
+    background-color: #d4c9b4;
+}
+
+.gold {
+    background-color: rgb(176, 154, 127);
+}
+
+.cranberry {
+    background-color: #6d433c;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    object-fit: cover;
+    transition: opacity 0.01s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    z-index: 2;
+}
